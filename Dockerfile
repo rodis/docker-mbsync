@@ -7,4 +7,4 @@ RUN apk add ca-certificates
 RUN mkdir /config
 RUN mkdir /mail
 
-CMD ["mbsync", "-c config/mbsyncrc", "-a"]
+CMD ["mbsync", "-c", "config/mbsyncrc", "-a"]
