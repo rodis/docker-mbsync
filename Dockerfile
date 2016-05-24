@@ -6,4 +6,7 @@ RUN apk add ca-certificates
 
 RUN mkdir /mail
 
-CMD ["mbsync", "-c", "/mail/config/mbsyncrc", "-a"]
+ADD cron /
+RUN crontab /cron
+
+CMD ["crond", "-f"]
